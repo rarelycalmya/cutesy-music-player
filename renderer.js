@@ -27,7 +27,7 @@ ipcRenderer.on("load-cover", (event, filePath) => {
 
 ipcRenderer.on("load-track", (event, filePath, songName) => {
     audioPlayer.src = filePath;
-    audioPlayer.play();
+    // audioPlayer.play();
     audioName.textContent = songName;
 });
 

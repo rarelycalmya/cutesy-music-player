@@ -9,8 +9,9 @@ let currentTrackIndex = 0;
 
 app.whenReady().then(() => {
     let mainWindow = new BrowserWindow({
-        width: 400,
-        height: 600,
+        width: 450,
+        height: 650,
+        resizable: false,
         webPreferences: {
             nodeIntegration: true,
             contextIsolation: false,
