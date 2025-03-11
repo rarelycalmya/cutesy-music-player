@@ -6,6 +6,7 @@ const playPauseButton = document.getElementById("playPauseButton");
 const nextButton = document.getElementById("nextButton");
 const prevButton = document.getElementById("prevButton");
 const progressBar = document.getElementById("progressBar");
+const playPauseImage = playPauseButton.querySelector("img");
 
 audioPlayer.addEventListener("timeupdate", () => {
     if (audioPlayer.duration) {
@@ -27,16 +28,18 @@ ipcRenderer.on("load-cover", (event, filePath) => {
 
 ipcRenderer.on("load-track", (event, filePath, songName) => {
     audioPlayer.src = filePath;
-    // audioPlayer.play();
+    audioPlayer.play();
     audioName.textContent = songName;
 });
 
 ipcRenderer.on("toggle-playback", () => {
     if(audioPlayer.paused) {
         audioPlayer.play();
+        playPauseImage.src = "graphics/pause.png";
     }
     else {
         audioPlayer.pause();
+        playPauseImage.src = "graphics/play.png";
     }
 });
 

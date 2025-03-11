@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music player</title>
+    <title>Just your personal offline music player uwu</title>
     <script defer src="renderer.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -13,21 +13,25 @@
     <div class="player-container">
 
         <audio id="audioPlayer"></audio>
-        <div id = "audio-name">
-            <!-- <div id="audioName"></div> -->
-            <img src = "graphics/Music Name.png" id = "music-name">
-            
+        <div id = "audioNameBox">
+            <div id="audioName"></div>
+            <img src = "graphics/Music Name.png" id = "musicName">
         </div>
-        <img src ="graphics/Music-cover.png">
-        <!-- <img id="coverLoader" alt = "Image" width = 300> -->
 
+        <img id="coverLoader" alt = "Image" >
+
+        <div class="progress-bar">
+            <input type="range" id="progressBar" value="0" min="0" max="100" step="0.1">
+        </div>
         
         <div class="controls">
-            <input type="range" id="progressBar" value="0" min="0" max="100" step="0.1">
+            
             <br/>
-            <button id="prevButton" class="icon-btns"><img src = "graphics/prev.png" ></button>
-            <button id="playPauseButton" class="icon-btns"><img src = "graphics/pause.png" ></button>
-            <button id="nextButton" class="icon-btns"><img src = "graphics/next.png" ></button>
+            <div class ="button-container">
+                <button id="prevButton" class="icon-btns"><img src = "graphics/prev.png" ></button>
+                <button id="playPauseButton" class="icon-btns"><img src = "graphics/pause.png" ></button>
+                <button id="nextButton" class="icon-btns"><img src = "graphics/next.png" ></button>
+            </div>
         </div>
 
     </div>
