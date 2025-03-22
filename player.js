@@ -37,6 +37,7 @@ app.whenReady().then(() => {
             } else {
                 console.error("No audio files found in the folder.");
             }
+            // Fix playing next song automatically
         });
     });
 
